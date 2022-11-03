@@ -1,0 +1,31 @@
+body {
+    font-family: 'Montserrat' , sans-serif;
+  }
+   img {
+     height: 20px;
+     width: 20px;
+     display: inline-block;
+     margin-left: 40px;
+   }
+   .a {
+     display: inline-block;
+     color: grey;
+   }
+   .b {
+     display: inline-block;
+     color: #FF6948;
+   }
+   .imgg {
+    display: inline-block;
+  }
+  .c {
+    display: inline-block;
+  }
+  .img1 {
+    display: block;
+    width: 400px;
+    height: 200px;
+  }
+  .like {
+    margin-top: 20px;
+  }

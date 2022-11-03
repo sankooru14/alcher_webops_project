@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Part 1</title>
+    
+    <link rel="stylesheet" href="{% static 'blog/css/styles3.css' %}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <img class="alcher"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTc-6kmUFHjzy_kTBYhM6scsGjBaTxQ2tqNA&usqp=CAU" alt="alcheringa">
+    <h2 class="a">Alcheringa</h2>
+    <h2 class="b">Connect</h2>
+    <h1 class="post">My Posts</h1>
+    <img class="left"src="https://www.pngitem.com/pimgs/m/73-736296_arrow-left-back-direction-symbol-pointer-left-arrow.png" alt="">
+    <a href="{% url 'blog-myprofile' %}"><h2 class="c">Go Back</h2></a>
+
+     <!-- <div class="box1">
+      <img class="photo" src="autumn-poolside.jpg" alt="">
+      <img class="like" src="https://icon-library.com/images/like-icon-facebook/like-icon-facebook-28.jpg" alt="">
+      197 likes
+
+    </div> -->
+
+    
+      {% for x in img %}
+      <div class="row" style="display: inline-block;">
+          <div style="display: inline-block;  margin-left: 40px;">
+            <img class="card" style="height:200px; width: 200px; display: block;  " src="{{x.photo.url}}" alt="">
+            <img class="like" style=" display: inline-block;"src="https://icon-library.com/images/like-icon-facebook/like-icon-facebook-28.jpg" alt="">
+            <p style="display: inline-block;">197 likes</p>
+          </div>
+      
+          
+      </div>   
+      {% endfor %}
+    
+    
+    
+  </body>
+</html>

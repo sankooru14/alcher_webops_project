@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Part 1</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+    <div class="left">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTc-6kmUFHjzy_kTBYhM6scsGjBaTxQ2tqNA&usqp=CAU" alt="alcheringa">
+      <h1 class="a">Alcheringa</h1>
+      <h1 class="b">Connect</h1>
+      <h2 class="c">Alcheringa connect lets you associate with people in your life</h2>
+
+
+    </div>
+
+
+    <div class="right">
+      <div class="right1">
+        <h1 class="login">Login</h1>
+        <p class="d">Don't have an account?</p>
+        <p class="e"><a href="{% url 'register' %}"><u> Register here</u></a></p>
+
+      </div>
+      <div class="right2">
+        <h2 class="user">Username</h2>
+        <input type="text" class="css-input" />
+        <h2 class="user">Password</h2>
+        <input type="text" class="css-input" />
+        <button class="btn"type="button" name="button">Login</button>
+
+      </div>
+
+    </div>
+
+
+
+
+  </body>
+</html>

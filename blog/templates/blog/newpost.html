@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Part 1</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="block1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTc-6kmUFHjzy_kTBYhM6scsGjBaTxQ2tqNA&usqp=CAU" alt="alcheringa">
+      <h2 class="a">Alcheringa</h2>
+      <h2 class="b">Connect</h2>
+    </div>
+
+    <h1 class="new">Create a new post</h1>
+
+    <div class="left">
+      <p class="image">Image</p>
+      <div class="upload">
+        <h2 class="text">Upload an image</h2>
+      </div>
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.photo}}
+      <p class="image">Caption</p>
+
+      <div class="image-caption">
+        <p>Give an image caption</p>
+        {{form.content}}
+      </div>
+      <p class="current">Current Location</p>
+      <h3 class="status"></h3>
+      <strong id="give">Give Location Permissions.</strong>
+      <input type="submit" class="btn btn-danger" value="Upload ">
+      
+    </form>
+
+      </div>
+
+
+
+    </div>
+
+
+    <div class="right">
+      <div class="right1">
+        <h1 class="prof">My Profile</h1>
+        <img class="clas"src="https://static.vecteezy.com/system/resources/previews/005/193/528/original/log-out-icon-symbol-logout-arrow-and-door-icon-exit-logout-sign-icon-log-out-symbol-free-vector.jpg" alt="">
+      </div>
+
+
+      <div class="right2">
+        <img class="img2"src="{% static 'blog/images/nature-circle.png' %}" alt="">
+        <p class="user">{{request.user.username}}</p>
+        <p class="person">{{request.user.first_name}} {{request.user.last_name}}</p>
+        <div class="para">
+          <p class="upper">Lorem ipsum dolor sit amet, consectetur </p>
+          <p class="middle">adipiscing elit. Donec vitae rhoncus s quis. </p>
+          <p class="bottom">Morbi facilisis ante sed maximus rhoncus.</p>
+        </div>
+
+        <img class="plus"src="https://www.shareicon.net/data/512x512/2015/12/01/680587_add_512x512.png" alt="">
+        <p class="post">My posts</p>
+
+        <img class="save"src="https://img.myloview.com/stickers/save-icon-isolated-on-white-background-bookmark-symbol-modern-simple-vector-for-web-site-or-mobile-app-700-207747636.jpg" alt="">
+        <p class="saved">Saved posts</p>
+
+
+
+
+      </div>
+
+      <div class="below">
+        <img class="plus"src="https://www.shareicon.net/data/512x512/2015/12/01/680587_add_512x512.png" alt="">
+        <p class="create">Create a new post</p>
+
+      </div>
+
+
+    </div>
+
+    
+
+  <script src="{% static 'blog/js/index.js' %}" charset="utf-8"></script>
+  </body>
+</html>

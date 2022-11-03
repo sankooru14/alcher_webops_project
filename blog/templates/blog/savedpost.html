@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <title>Saved Post</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'blog/css/styles4.css' %}">
+    </head>
+    <body>
+        <div class="block1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTc-6kmUFHjzy_kTBYhM6scsGjBaTxQ2tqNA&usqp=CAU" alt="alcheringa">
+            <h2 class="a">Alcheringa</h2>
+            <h2 class="b">Connect</h2>
+      
+      
+        </div>
+
+        <h2 class="b" style="margin-left: 40px;">Saved Posts</h2>
+
+        {% for x in img %}
+        <div>
+            <img class="imgg"src="{% static 'blog/images/nature-circle.png' %}" alt="">
+            <p class="c">{{x.author.username}}</p>
+        </div>
+      
+      <img class="img1"src="{{x.photo.url}}" alt="">
+      <img class="like" src="https://icon-library.com/images/like-icon-facebook/like-icon-facebook-28.jpg" alt="">
+      197 likes
+      <a href="{% url 'saved-post' %}"><img class="save" src="https://img.myloview.com/stickers/save-icon-isolated-on-white-background-bookmark-symbol-modern-simple-vector-for-web-site-or-mobile-app-700-207747636.jpg" alt=""></a>
+      {% endfor %}
+      
+    </body>
+</html>

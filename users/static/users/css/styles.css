@@ -1,0 +1,68 @@
+body {
+    font-family: 'Montserrat' , sans-serif;
+  }
+ img {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+    bottom: 10px;
+  }
+.a {
+color: grey;
+display: inline-block;
+}
+.b {
+color: #FF6948;
+display: inline-block;
+margin-left: 10px;
+}
+.c {
+margin-top: 40px;
+width: 75%;
+color: grey;
+}
+.left {
+margin-top: 200px;
+margin-left: 150px;
+width: 40%;
+display: inline-block;
+}
+ 
+.right {
+    width: 25%;
+    float:right;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+.login {
+    margin-bottom: 50px;
+    position: relative;
+    top: 25px;
+    
+    
+    margin-left: 20px;
+    color: white;
+}
+.top-right {
+    background-color: #FF6948;
+    height: 150px;
+}
+.text-muted {
+    margin-left: 20px;
+    color: white!important;
+    
+}
+.ml-2 {
+    margin-left: 20px;
+}
+
+.form-group {
+    margin-top: 50px;
+}
+.btn {
+    text-align: center;
+    margin-left: 168px;
+    margin-right: 168px;
+}

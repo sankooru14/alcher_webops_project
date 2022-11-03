@@ -1,0 +1,122 @@
+body {
+    font-family: 'Montserrat' , sans-serif;
+  }
+  img {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-right: 30px;
+  }
+ .a {
+   color: grey;
+   display: inline-block;
+ }
+ .b {
+   color: #FF6948;
+   display: inline-block;
+   margin-left: 10px;
+ }
+ .c {
+   width: 60%;
+   color: grey;
+ }
+ .left {
+   margin-top: 200px;
+   margin-left: 200px;
+   width: 40%;
+   display: inline-block;
+ }
+ .login {
+   color: white;
+   margin-left: 30px;
+   margin-top: 50px;
+ }
+ .right {
+   display: inline-block;
+   float: right;
+   margin-right: 150px;
+   margin-top: 100px;
+   margin-left: 0;
+   width: 400px;
+ 
+ }
+ .right1 {
+   display: inline-block;
+   background-color: #FF6948;
+ 
+   width: 400px;
+     /* width: 300px;
+     height: 200px; */
+ }
+ .right2 {
+   /* display: inline-block; */
+   border-style: solid;
+   border-width: 1px;
+   border-color: grey;
+   border-radius: 10px;
+ }
+ 
+ .d {
+   display: inline-block;
+   margin-left: 30px;
+   margin-right: 20px;
+   color: white;
+ }
+ .e {
+   color: white;
+   display: inline-block;
+   margin-right: 0px;
+   margin-left: 30px;
+ }
+ .user {
+   color: grey;
+   margin-left: 30px;
+ }
+ .input {
+   width: 80%;
+ 
+ }
+ .btn {
+   -webkit-border-radius: 7;
+   -moz-border-radius: 7;
+   border-radius: 7px;
+   font-family: Georgia;
+   color: #FF6948;
+   font-size: 20px;
+   
+   padding-left: 75px;
+   padding-right: 75px;
+   border: solid #FF6948 2px;
+   text-decoration: none;
+   display: block;
+   margin-top: 50px;
+   margin-left: 30px;
+   margin-right: 30px;
+   width: 340px;
+   margin-bottom: 60px;
+ }
+ 
+ .btn:hover {
+   text-decoration: none;
+ }
+ .css-input {
+      padding: 5px;
+      font-size: 16px;
+      border-width: 1px;
+      border-color: #CCCCCC;
+      background-color: #FFFFFF;
+      color: #000000;
+      border-style: solid;
+      border-radius: 0px;
+      box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+      text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+      width: 80%;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      margin-right: 30px;
+      width: 340px;
+ }
+  .css-input:focus {
+      outline:none;
+ }
+ 

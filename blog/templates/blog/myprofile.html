@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Part 1</title>
+    <link rel="stylesheet" href="{% static 'blog/css/styles1.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="block1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTc-6kmUFHjzy_kTBYhM6scsGjBaTxQ2tqNA&usqp=CAU" alt="alcheringa">
+      <h2 class="a">Alcheringa</h2>
+      <h2 class="b">Connect</h2>
+
+
+    </div>
+
+
+    <div class="first-img">
+      {% for x in img %}
+      <div>
+        <img class="imgg"src="{% static 'blog/images/nature-circle.png' %}" alt="">
+      <p class="c">{{x.author.username}}</p>
+      </div>
+      
+      <img class="img1"src="{{x.photo.url}}" alt="">
+      <img class="like" src="https://icon-library.com/images/like-icon-facebook/like-icon-facebook-28.jpg" alt="">
+      197 likes
+      <a href="{% url 'favourite-add' x.id %}"><img class="save" src="https://img.myloview.com/stickers/save-icon-isolated-on-white-background-bookmark-symbol-modern-simple-vector-for-web-site-or-mobile-app-700-207747636.jpg" alt=""></a>
+      {% endfor %}
+    </div>
+    <!-- <div class="row">
+          {% for x in img %}
+          <div class="col-sm-4">
+            <div class="card m-2">
+              <img class="card-img-top" height="200px" src="{{x.photo.url}}" alt="">
+            </div>
+          </div>
+          {% endfor %} -->
+
+    <div class="right">
+      <div class="right1">
+        <h1 class="prof">My Profile</h1>
+        <a href="{% url 'logout' %}"><i class='bx bx-exit' style="padding-left: 143px;
+        text-align: center;
+        font-size: 25px;  
+        color: white;"></i></a>
+      </div>
+
+
+      <div class="right2">
+        <img class="img2"src="{% static 'blog/images/user.jpg' %}" alt="">
+        
+
+        <p class="user">{{request.user.username}}</p>
+        <p class="person">{{request.user.first_name}} {{request.user.last_name}}</p>
+        <div class="para">
+          <p class="upper">Lorem ipsum dolor sit amet, consectetur </p>
+          <p class="middle">adipiscing elit. Donec vitae rhoncus s quis. </p>
+          <p class="bottom">Morbi facilisis ante sed maximus rhoncus.</p>
+        </div>
+
+        <img class="plus"src="https://www.shareicon.net/data/512x512/2015/12/01/680587_add_512x512.png" alt="">
+        <a href="{% url 'blog-mypost' %}"><p class="post">My posts</p></a>
+
+        <img class="save"src="https://img.myloview.com/stickers/save-icon-isolated-on-white-background-bookmark-symbol-modern-simple-vector-for-web-site-or-mobile-app-700-207747636.jpg" alt="">
+        <a href="{% url 'saved-post' %}"><p class="saved">Saved posts</p></a>
+
+        <div class="below">
+          <img class="plus"src="https://www.shareicon.net/data/512x512/2015/12/01/680587_add_512x512.png" alt="">
+          <a href="{% url 'blog-newpost' %}"><p class="create">Create a new post</p></a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+    
+
+
+  </body>
+</html>
